@@ -1,0 +1,35 @@
+2014-11-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.0.2
+
+	* inst/include/annoylib.h: New version with verbosity toggle
+	* src/annoy.cpp: Added setter for verbosity
+
+2014-11-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Enable binary index test
+
+2014-11-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/tests/runit.index.R: New test against binary index
+	* inst/tests/data/test.tree: Binary file used by test
+
+	* inst/tests/runit.euclidean.R: Added more tests
+
+2014-11-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* tests/runUnitTests.R: Added RUnit unit test caller
+	* inst/tests/runit.angular.R: First set of unit tests
+	* inst/tests/runit.euclidean.R: Idem
+	* DESCRIPTION: Added Suggests: RUnit
+
+	* .travis.yml: Added to enable Travis CI
+
+2014-11-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: Updated to new version from annoy
+
+2014-11-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Initial version 0.0.1
+

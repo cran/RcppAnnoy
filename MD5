@@ -1,0 +1,17 @@
+df9ecbd24c3e0adc6d6aff56966ad98e *ChangeLog
+4c8ba8806f94e6cc074a64c96b46a7b9 *DESCRIPTION
+f55daae53b1162892f827577e1c06ac3 *NAMESPACE
+c2e626c6f66f458629eecba49ef0d7e6 *R/annoy.R
+ba2d24b2d23ddceb5fc1cb61366057c1 *README.md
+de0c4886de504a4e34c64ec906431934 *cleanup
+f6f2db8ee77cb1083ce50ea2ce613ca8 *demo/00Index
+626d1ee412f1f366f860e2fa1b7e15a1 *demo/simpleExample.R
+6a8996881ca167e1aa86219aed840803 *inst/include/annoylib.h
+14c740fb1a1c4d78afc7d3b76641d9e6 *inst/tests/data/test.tree
+7999b0b6c0ee8f51ef07099485ece47e *inst/tests/runit.angular.R
+b835e0f01680c497f2e4b8ee38bf82e9 *inst/tests/runit.euclidean.R
+a4aab8863c3af4dd5a8bce8c03ba89c2 *inst/tests/runit.index.R
+39f3e541b8d7b60a11b5e6b65d65232e *man/RcppAnnoy-package.Rd
+cd6583a9b160056a448812926b377d04 *src/Makevars
+cbc87d817937d27b92626f7aaf48e58e *src/annoy.cpp
+14d695d5920a9da30dc4ad1626edadcf *tests/runUnitTests.R
