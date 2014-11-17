@@ -1,3 +1,28 @@
+2014-11-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.0.3
+
+	* inst/include/annoylib.h: Updated to new version from Annoy
+
+2014-11-16  Quiank Kou <qkou@umail.iu.edu>
+
+	* inst/include/annoylib.h: Added Windows support for mmap
+	* inst/include/mman.h: Windows implementation of mmap
+	* src/annoy.cpp: Add two #undef needed on Windows
+
+2014-11-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Updated to note CRAN package, possible Windows port
+
+2014-11-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: New upstream version
+
+2014-11-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: New upstream version with templated int
+	* src/annoy.cpp: Updated for new Annoy library
+
 2014-11-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Version 0.0.2

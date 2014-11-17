@@ -26,6 +26,15 @@ original Python wrapper for the [Annoy](https://github.com/spotify/annoy)
 library. It also replicates all unit tests written for the Python frontend,
 including a test for efficiently `mmap`-ing a binary index file.
 
+The package originally built on Linux and OS X, and thanks to a patch by
+[Qiang Kou](https://github.com/thirdwing) now also builds on Windows.
+
+## Installation
+
+You can either install from source via this repo, or install
+[the CRAN package](http://cran.r-project.org/web/packages/RcppAnnoy/index.html)
+the usual way from [R](http://www.r-project.org).
+
 ## Author
 
 Dirk Eddelbuettel
