@@ -55,8 +55,13 @@
 // TODO: this is turned on by default, but may not work for all architectures! Need to investigate.
 #endif
 
-using namespace std;
-using namespace boost;
+using std::vector;
+using std::string;
+using std::pair;
+using std::numeric_limits;
+using std::make_pair;
+using boost::variate_generator;
+using boost::uniform_01;
 
 #if BOOST_VERSION > 1004400
 #define BOOST_RANDOM boost::random
@@ -235,7 +240,7 @@ protected:
   void* _nodes; // Could either be mmapped, or point to a memory buffer that we reallocate
   S _n_nodes;
   S _nodes_size;
-  vector<int> _roots;
+  vector<S> _roots;
   S _K;
   bool _loaded;
   bool _verbose;
@@ -251,7 +256,7 @@ public:
     _loaded = false;
     _verbose = false;
 
-    _K = (sizeof(T) * f + sizeof(int) * 2) / sizeof(int);
+    _K = (sizeof(T) * f + sizeof(S) * 2) / sizeof(S);
   }
   ~AnnoyIndex() {
     if (_loaded) {
@@ -285,7 +290,7 @@ public:
         break;
       if (_verbose) showUpdate("pass %zd...\n", _roots.size());
 
-      vector<int> indices;
+      vector<S> indices;
       for (S i = 0; i < _n_items; i++)
         indices.push_back(i);
 
@@ -352,8 +357,8 @@ public:
 
     // Find the roots by scanning the end of the file and taking the nodes with most descendants
     S m = -1;
-    for (int i = _n_nodes - 1; i >= 0; i--) {
-      int k = _get(i)->n_descendants;
+    for (S i = _n_nodes - 1; i >= 0; i--) {
+      S k = _get(i)->n_descendants;
       if (m == -1 || k == m) {
         _roots.push_back(i);
         m = k;
@@ -435,7 +440,7 @@ protected:
         // TODO: this loop isn't needed for the angular distance, because
         // we can just split by a random vector and it's fine. For Euclidean
         // distance we need it to calculate the offset
-        int j = indices[i];
+        S j = indices[i];
         typename Distance::node* n = _get(j);
         if (n)
           children.push_back(n);
@@ -447,7 +452,7 @@ protected:
       children_indices[1].clear();
 
       for (size_t i = 0; i < indices.size(); i++) {
-        int j = indices[i];
+        S j = indices[i];
         typename Distance::node* n = _get(j);
         if (n) {
           bool side = Distance::side(m, n->v, _f, &_random);
@@ -473,7 +478,7 @@ protected:
         m->v[z] = 0.0;
 
       for (size_t i = 0; i < indices.size(); i++) {
-        int j = indices[i];
+        S j = indices[i];
         // Just randomize...
         children_indices[_random.flip()].push_back(j);
       }
@@ -490,7 +495,7 @@ protected:
     return item;
   }
 
-  void _get_nns(const T* v, S i, vector<S>* result, int limit) {
+  void _get_nns(const T* v, S i, vector<S>* result, S limit) {
     const typename Distance::node* n = _get(i);
 
     if (n->n_descendants == 0) {
@@ -498,7 +503,8 @@ protected:
     } else if (n->n_descendants == 1) {
       result->push_back(i);
     } else if (n->n_descendants <= _K) {
-      result->insert(result->end(), n->children, &(n->children[n->n_descendants]));
+      const S* dst = n->children;
+      result->insert(result->end(), n->children, &dst[n->descendants]);
     } else {
       bool side = Distance::side(n, v, _f, &_random);
 
@@ -524,7 +530,8 @@ protected:
       if (nd->n_descendants == 1) {
         nns.push_back(i);
       } else if (nd->n_descendants <= _K) {
-	nns.insert(nns.end(), nd->children, &(nd->children[nd->n_descendants]));
+	const S* dst = nd->children;
+	nns.insert(nns.end(), nd->children, &dst[nd->n_descendants]);
       } else {
         T margin = Distance::margin(nd, v, _f);
         q.push(make_pair(+margin, nd->children[1]));

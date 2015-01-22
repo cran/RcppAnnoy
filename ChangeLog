@@ -1,3 +1,22 @@
+2015-01-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Version 0.0.5
+
+2015-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: Synced once more with upstream; this
+	version addresses the UBSAN runtime issue 
+
+2015-01-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: Synced with upstream repo
+
+2015-01-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Bumped Version: and Date:
+
+	* src/Makevars: One char correction requested by CRAN Maintainers
+
 2014-12-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION: Version 0.0.4
@@ -11,7 +30,7 @@
 
 	* inst/include/annoylib.h: Updated to new version from Annoy
 
-2014-11-16  Quiank Kou <qkou@umail.iu.edu>
+2014-11-16  Qiang Kou <qkou@umail.iu.edu>
 
 	* inst/include/annoylib.h: Added Windows support for mmap
 	* inst/include/mman.h: Windows implementation of mmap
