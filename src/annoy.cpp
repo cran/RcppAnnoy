@@ -2,7 +2,7 @@
 //
 //  RcppAnnoy -- Rcpp bindings to Annoy library for Approximate Nearest Neighbours
 //
-//  Copyright (C) 2014           Dirk Eddelbuettel 
+//  Copyright (C) 2014 - 2015  Dirk Eddelbuettel 
 //
 //  This file is part of RcppAnnoy
 //
@@ -35,6 +35,8 @@
 
 // define R's REprintf as the 'local' error print method for Annoy
 #define __ERROR_PRINTER_OVERRIDE__  REprintf
+// define R's unif_rand() as the uniform rand generator for Annoy
+#define __UNIFORM_RAND_OVERRIDE__ static_cast<long int>(unif_rand() * RAND_MAX)
 #include "annoylib.h"
 
 template<typename S, typename T, typename Distance> 
@@ -49,8 +51,8 @@ public:
     }
 
     void   callBuild(int n)               { this->build(n);                  }
-    void   callSave(std::string filename) { this->save(filename);            }
-    void   callLoad(std::string filename) { this->load(filename);            }
+    void   callSave(std::string filename) { this->save(filename.c_str());    }
+    void   callLoad(std::string filename) { this->load(filename.c_str());    }
     void   callUnload()                   { this->unload();                  }
     int    getNItems()                    { return this->get_n_items();      }
     double getDistance(int i, int j)      { return this->get_distance(i, j); }
