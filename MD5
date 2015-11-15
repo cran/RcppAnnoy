@@ -1,12 +1,13 @@
-a9cd95e62ca818383bfddc868c13eaf7 *ChangeLog
-0912daaa4502959cf644321fb4beaab0 *DESCRIPTION
+3c53f6575f56fa244ebc6ffe882bb549 *ChangeLog
+04f77fb8cfa32d57bd8cce6f3007d44e *DESCRIPTION
 f55daae53b1162892f827577e1c06ac3 *NAMESPACE
 c2e626c6f66f458629eecba49ef0d7e6 *R/annoy.R
-af7cc987b1c1d464f2844e7de117d075 *README.md
+c789aef0410558de66cfe64d4034b5f0 *README.md
 ef45c7094a55895eca40b0c976321920 *cleanup
 f6f2db8ee77cb1083ce50ea2ce613ca8 *demo/00Index
 626d1ee412f1f366f860e2fa1b7e15a1 *demo/simpleExample.R
-e633c28bdbfb052a69f2cd7f0e03260c *inst/include/annoylib.h
+a5e649b82fcc39799689c35230a7655b *inst/include/annoylib.h
+7a077c18e11f29fea7a28a84912ca58c *inst/include/kissrandom.h
 63150c2c01309e10d66fb710686e5399 *inst/include/mman.h
 14c740fb1a1c4d78afc7d3b76641d9e6 *inst/tests/data/test.tree
 7999b0b6c0ee8f51ef07099485ece47e *inst/tests/runit.angular.R
@@ -14,5 +15,5 @@ b835e0f01680c497f2e4b8ee38bf82e9 *inst/tests/runit.euclidean.R
 a4aab8863c3af4dd5a8bce8c03ba89c2 *inst/tests/runit.index.R
 39f3e541b8d7b60a11b5e6b65d65232e *man/RcppAnnoy-package.Rd
 52c711d73778c408c9d77e8c3b7c6bd5 *src/Makevars
-2e49180402e8e1b9af0df985c58bce82 *src/annoy.cpp
+6df2b019940954e83dfd47fc707751d8 *src/annoy.cpp
 14d695d5920a9da30dc4ad1626edadcf *tests/runUnitTests.R
