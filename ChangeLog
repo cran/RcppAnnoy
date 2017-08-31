@@ -1,3 +1,56 @@
+2017-08-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.9
+
+2017-07-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/tests/runit.angular.R: Additional tests from upstream
+	* inst/tests/runit.euclidean.R: Idem
+	* inst/tests/runit.manhattan.R: Idem
+
+2017-07-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/annoy.cpp (RCPP_MODULE): New Manhattan distance module
+
+	* inst/tests/runit.manhattan.R: New test file
+
+	* R/annoy.R: Load module AnnoyManhattan
+	* src/init.c: Register module boot function
+
+	* man/RcppAnnoy-package.Rd: Aliases for AnnoyManhattan
+
+2017-07-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: New upstream version annoy 1.9.1
+	* inst/include/kissrandom.h: Idem
+
+	* src/annoy.cpp (Annoy): Update call to match updated interface
+
+	* inst/tests/runit.angular.R: Update three tests as the returned
+	distance metric is now the square root of the previous value
+
+	* .travis.yml (group): Added per Travis blog
+
+2017-07-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml (before_install): Use https for curl fetch
+
+2017-07-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Use alternate for img.shields.io GPL-2+ badge
+
+2017-07-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/include/annoylib.h (>): Ensure we write as binary
+
+2017-04-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/init.c (R_init_RcppAnnoy): Call R_registerRoutines()
+        and R_useDynamicSymbols()
+        * NAMESPACE: Use .registration=TRUE on useDynLib
+
 2016-10-01  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.8
