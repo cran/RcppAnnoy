@@ -1,3 +1,78 @@
+2018-10-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.11
+
+2018-10-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: Only define NOMINMAX if not defined
+
+	* vignettes/UsingAnnoyInCpp.Rmd: Simplified by having C++ snippets
+	typeset by pandoc instead of attempting OS-dependent compilation
+
+2018-10-28  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/include/annoylib.h: New upstream version 1.13 past pr325
+	* inst/include/kissrandom.h: Idem
+
+	* vignettes/UsingAnnoyInCpp: Renamed vignette, one size_t use
+
+2018-10-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Added dependency count badge
+
+2018-10-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/UsingAnnoyInC++.Rmd: Renamed vignette, minor edits
+	* vignettes/rcppannoy.bib: Expanded, sorted (thanks, Emacs)
+
+2018-10-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/rcppannoy.Rmd: Minor edits
+
+2018-10-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+2018-10-09  Aaron Lun  <aaron.lun@cruk.cam.ac.uk>
+
+	* vignettes/rcppannoy.Rmd: Minor fixes
+
+2018-10-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: New upstream version 1.13 plus two PRs by
+	Aaron and Dirk, respectively.
+	* inst/include/mman.h: Idem
+
+2018-10-06  Aaron Lun  <aaron.lun@cruk.cam.ac.uk>
+
+	* vignettes/rcppannoy.Rmd: New vignette on using Annoy from C++
+	* DESCRIPTION: Added required Suggests: and VignetteBuilder:
+	* .travis.yml: Added r-cran-knitr and r-cran-rmarkdown
+
+2018-09-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Switch Travis CI to R 3.5 repo
+
+2017-12-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/kissrandom.h: New upstream version
+	* inst/include/annoylib.h: Idem; plus some small changes to avoid
+	g++ warnings, also sent upstream
+
+	* inst/tests/runit.euclidean.R: Relaxed one '<' comparison to '<='
+	* inst/tests/runit.manhattan.R: Idem
+
+	* src/init.c: Added new Hamming distance measure (via template)
+	* src/annoy.cpp: Idem; plus more use of template type
+
+	* inst/tests/runit.hamming.R: Unit tests for 'AnnoyHamming'
+	* man/RcppAnnoy-package.Rd: Documentation alias for 'AnnoyHamming'
+
+	* .Rbuildignore: Ignore top-level *tar.gz file
+	* .gitignore: Idem
+
 2017-09-25  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.10
