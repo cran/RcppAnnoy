@@ -2,8 +2,8 @@ Package: RcppAnnoy
 Type: Package
 Title: 'Rcpp' Bindings for 'Annoy', a Library for Approximate Nearest
         Neighbors
-Version: 0.0.11
-Date: 2018-10-30
+Version: 0.0.12
+Date: 2019-05-12
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: 'Annoy' is a small C++ library for Approximate Nearest Neighbors 
@@ -17,9 +17,8 @@ License: GPL (>= 2)
 Depends: R (>= 3.1)
 Imports: methods, Rcpp (>= 0.11.3)
 LinkingTo: Rcpp
-Suggests: RUnit, knitr, rmarkdown, pinp
+Suggests: tinytest
 NeedsCompilation: yes
-VignetteBuilder: knitr
-Packaged: 2018-10-30 11:13:35.827336 UTC; edd
+Packaged: 2019-05-12 13:01:25.92041 UTC; edd
 Repository: CRAN
-Date/Publication: 2018-11-01 18:40:08 UTC
+Date/Publication: 2019-05-12 17:20:07 UTC

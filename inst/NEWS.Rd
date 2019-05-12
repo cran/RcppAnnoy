@@ -3,6 +3,20 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppannoy/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppannoy/issues/#1}{##1}}
 
+\section{Changes in version 0.0.12 (2019-05-12)}{
+  \itemize{
+    \item Allow setting of seed (Dirk in \ghpr{41} fixing \ghit{40}).
+    \item Document \code{setSeed} (James Melville in \ghpr{42}
+    documenting \ghit{41}).
+    \item Added documentation (Adam Spannbauer in \ghpr{44} closing
+    \ghit{43}).
+    \item Switched unit testing to the new \pkg{tinytest} package (Dirk
+    in \ghpr{45}).
+    \item The vignette is now pre-made in included as-is in Sweave
+    document reducing the number of suggested packages.
+  }
+}
+
 \section{Changes in version 0.0.11 (2018-10-30)}{
   \itemize{
     \item Synchronized with Annoy upstream (\ghpr{26}, \ghpr{30}, \ghpr{36}).

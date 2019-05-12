@@ -1,47 +1,38 @@
 
-.setUp <- function() {
-    suppressMessages(library(RcppAnnoy))
-}
+suppressMessages(library(RcppAnnoy))
 
-test01getNNsByVector <- function() {
-    f <- 2
-    a <- new(AnnoyHamming, f)
+# test01getNNsByVector
+f <- 2
+a <- new(AnnoyHamming, f)
+a$addItem(0, c(2, 2))
+a$addItem(1, c(3, 2))
+a$addItem(2, c(3, 3))
+a$build(10)
+checkEqual(a$getNNsByVector(c(4,4), 3), c(0,1,2), msg="getNNsByVector check 1")
+checkEqual(a$getNNsByVector(c(1,1), 3), c(2,1,0), msg="getNNsByVector check 2")
+checkEqual(a$getNNsByVector(c(5,3), 3), c(2,1,0), msg="getNNsByVector check 3")
 
-    a$addItem(0, c(2, 2))
-    a$addItem(1, c(3, 2))
-    a$addItem(2, c(3, 3))
 
-    a$build(10)
+# test02getNNsByItem
+f <- 2
+a <- new(AnnoyHamming, f)
+a$addItem(0, c(2, 2))
+a$addItem(1, c(3, 2))
+a$addItem(2, c(3, 3))
+a$build(10)
+checkEqual(a$getNNsByItem(0, 3), c(0, 1, 2), msg="getNNsByItem check 1")
+checkEqual(a$getNNsByItem(2, 3), c(2, 1, 0), msg="getNNsByItem check 2")
 
-    checkEquals(a$getNNsByVector(c(4,4), 3), c(0,1,2), msg="getNNsByVector check 1")
-    checkEquals(a$getNNsByVector(c(1,1), 3), c(2,1,0), msg="getNNsByVector check 2")
-    checkEquals(a$getNNsByVector(c(5,3), 3), c(2,1,0), msg="getNNsByVector check 3")
-}
 
-test02getNNsByItem <- function() {
-    f <- 2
-    a <- new(AnnoyHamming, f)
+# test03dist
+f <- 2
+a <- new(AnnoyHamming, f)
+a$addItem(0, c(0, 1))
+a$addItem(1, c(1, 1))
+a$addItem(2, c(0, 0))
+checkEqual(a$getDistance(0, 1), 1.0, msg="distance 1")#
+checkEqual(a$getDistance(1, 2), 2.0, msg="distance 2")#
 
-    a$addItem(0, c(2, 2))
-    a$addItem(1, c(3, 2))
-    a$addItem(2, c(3, 3))
-
-    a$build(10)
-
-    checkEquals(a$getNNsByItem(0, 3), c(0, 1, 2), msg="getNNsByItem check 1")
-    checkEquals(a$getNNsByItem(2, 3), c(2, 1, 0), msg="getNNsByItem check 2")
-}
-
-test03dist <- function() {
-    f <- 2
-    a <- new(AnnoyHamming, f)
-    a$addItem(0, c(0, 1))
-    a$addItem(1, c(1, 1))
-    a$addItem(2, c(0, 0))
-
-    checkEquals(a$getDistance(0, 1), 1.0, msg="distance 1")#
-    checkEquals(a$getDistance(1, 2), 2.0, msg="distance 2")#
-}
 
 ## test04largeIndex <- function() {
 ##     ## Generate pairs of random points where the pair is super close
