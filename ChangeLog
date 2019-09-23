@@ -1,3 +1,43 @@
+2019-09-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Release 0.0.13
+
+2019-09-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* src/annoy.cpp: Add unbuild() and onDiskBuild() functions
+
+	* inst/tinytest/testOnDiskBuild.R: Add tests for onDiskBuild()
+
+	* inst/tinytest/testIndex.R: Can now use tinytest::exit_file()
+	* inst/tinytest/testSeeds.R: Idem
+
+	* inst/include/annoylib.h: Use return code
+	* inst/include/mman.h: Only conditionally define ftruncate
+
+	* README.md: Small edits
+
+2019-09-21  Peter Hickey  <peter.hickey@gmail.com>
+
+	* vignettes/rmd/UsingAnnoyInCpp.Rmd: Remove spurious comma
+
+2019-09-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/include/annoylib.h: New upstream v1.16 (plus up to pr410)
+	* inst/include/mman.h: Idem
+
+	* src/annoy.cpp: Add getNTrees(), use error message in addItem()
+
+2019-09-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* R/annoy.R: Use a tempfile() in example to save + load an annoy tree
+	* man/AnnoyIndex.Rd: Ditto
+
 2019-05-12  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.0.12
