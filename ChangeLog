@@ -1,3 +1,15 @@
+2019-11-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.14
+
+2019-11-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* cleanup: Make safe for checkbashism by using only /bin/sh
+
+	* inst/include/annoylib.h: New upstream v1.16.2 (plus up to pr436)
+
 2019-09-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Release 0.0.13
