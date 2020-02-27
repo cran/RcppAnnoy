@@ -3,6 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppannoy/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppannoy/issues/#1}{##1}}
 
+\section{Changes in version 0.0.15 (2020-02-25)}{
+  \itemize{
+    \item RcppAnnoy synchronized with upstream PR 455 (Dirk in \ghpr{55}).
+    \item The help page has a small correction thanks to Bill1 Venables.
+  }
+}
+
 \section{Changes in version 0.0.14 (2019-11-11)}{
   \itemize{
     \item RcppAnnoy again synchronized with upstream to ensure builds with
