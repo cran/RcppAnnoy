@@ -1,6 +1,33 @@
+2020-03-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.16
+
+2020-03-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/arch.cpp (getArchictectureStatus): Add simple helper function
+	to show AVX and compiler status now that pragma has been removed
+
+2020-03-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/include/annoylib.h: Updated to upstream PR #462 which removes
+	the (optional and no longer needed) packing and one set of warnings
+
+2020-03-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/annoylib.h: Updated upstream PRs PRs #460 (which uses
+	int not size_t in one interface) and #461 (which inlines two helpers)
+
+2020-02-27  Aaron Lun  <aaron.lun@cruk.cam.ac.uk>
+
+	* inst/include/annoylib.h: Replace two size_t interfaces with int
+
 2020-02-25  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.15
+
+	* inst/include/annoylib.h: Use alloca() portably
 
 2020-02-24  Dirk Eddelbuettel  <edd@debian.org>
 
