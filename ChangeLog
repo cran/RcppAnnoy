@@ -1,3 +1,52 @@
+2020-12-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/version.cpp: Export as .annoy_version as we have an R wrapper
+
+	* .github/workflows/ci.yaml: Add CI runner using r-ci
+	* README.md: Add new badge
+
+2020-12-06  Aaron Lun  <infinite.monkeys.with.keyboards@gmail.com>
+
+	* src/version.cpp: Helper function to report Annoy version
+	* src/init.c: Register helper
+	* R/version.R: R wrapper
+	* man/getAnnoyVersion.Rd: Documentation
+
+2020-12-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+	* inst/include/RcppAnnoy.h: Idem
+
+	* inst/include/annoylib.h: Upstream sync post PR #522
+	* inst/include/kissrandom.h: Idem
+
+2020-11-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+	* inst/include/RcppAnnoy.h: Idem
+
+	* .travis.yml: Switch to r-ci
+
+2020-11-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/tinytest/testVignette.R: New test file
+
+	* inst/rmd/: Moved from vignettes/rmd
+	* inst/rmd/UsingAnnoyInCpp.Rmd: Allow for index file
+
+2020-11-22  Aaron Lun  <infinite.monkeys.with.keyboards@gmail.com>
+
+	* vignettes/rmd/UsingAnnoyInCpp.Rmd: Allow compilation of vignette
+	without adding more dependencies
+
+2020-11-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+	* inst/include/RcppAnnoy.h: Idem
+
+	* inst/include/RcppAnnoy.h: Additional typedefs for threading policy
+	* src/annoy.cpp: Threading policy typedef removed
+
 2020-11-15  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.17
