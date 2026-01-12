@@ -14,6 +14,9 @@
 \alias{AnnoyHamming}
 \alias{Rcpp_AnnoyHamming-class}
 \alias{Rcpp_AnnoyHamming}
+\alias{AnnoyDotProduct}
+\alias{Rcpp_AnnoyDotProduct-class}
+\alias{Rcpp_AnnoyDotProduct}
 \title{Approximate Nearest Neighbors with Annoy}
 \description{
 Annoy is a small library written to provide fast and memory-efficient
@@ -178,16 +181,10 @@ a$getNNsByVector(v, 5)
 # Return results as list with an element for distance
 a$getNNsByVectorList(v, 5, -1, TRUE)
 
-# Retrieve 5 nearest neighbors to vector v
-# search_k = -1 will invoke default search_k value of n_trees * n
-# Return results as list with an element for distance
-a$getNNsByVectorList(v, 5, -1, TRUE)
-
-
 # SAVING/LOADING ANNOY INDEX ---------------------------------------------------
 
 # Create a tempfile, replace with a local file to keep
-treefile <- tempfile(pattern="annoy", fileext="tree")
+treefile <- tempfile(pattern="annoy", fileext=".tree")
 
 # Save annoy tree to disk
 a$save(treefile)

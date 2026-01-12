@@ -1,3 +1,105 @@
+2026-01-12  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.23
+	* inst/include/RcppAnnoy.h: Idem
+
+2026-01-11  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/Makevars: No longer need to (explicitly) request C++17 
+
+2026-01-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/rmd/rcppannoy.bib: Updated references
+	* vignettes/UsingAnnoyInCpp.pdf: Regenerated under updated pinp
+	package to get improved DOI links
+
+	* DESCRIPTION (Description): No longer require
+	Additional_repositories as Rcpp 1.1.1 is on CRAN
+
+2026-01-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Switch to actions/checkout@v6
+
+2025-11-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
+2025-11-22  Amos Elberg <amos.elberg@gmail.com>
+
+ 	* inst/include/RcppAnnoy.h: Turn __ERROR_PRINTER_OVERRIDE__ into
+	function to quash a warning emitted from 64-bit integer vertex
+
+2025-07-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/UsingAnnoyInCpp.pdf: Regenerated
+	* inst/rmd/UsingAnnoyInCpp.Rmd: One linebreak-avoidance edit
+	* inst/rmd/rcppannoy.bib: Update references, add DOIs fields
+
+2025-07-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* vignettes/UsingAnnoyInCpp.pdf.asis: Switch to 'asis' vignette builder
+	* DESCRIPTION (VignetteBuilder): Add 'VignetteBuilder: Rcpp' along
+	with versioned Imports: on version 1.1.0.1 or newer
+
+	* .github/workflows/ci.yaml: (Temporary) installation of Rcpp 1.1.0.1
+	in order to access the 'asis' vignette builder provided by it
+	* DESCRIPTION: (Temporary) addition of Additional_repositories to
+	ensure updated Rcpp is used during r-universe processing
+
+	* tests/tinytest.R: Small refresh and edit
+
+2025-05-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* demo/00Index: Add missing newline
+
+2025-03-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Use r-ci action with embedded bootstrap
+
+2024-12-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* demo/irisExample.R: New contributed demo
+	* demo/00Index: Indexed
+
+	* R/annoy.R: Remove duplicate example
+	* man/AnnoyIndex.Rd: Regenerated to update example
+
+2024-12-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/annoy.R: Add missing dot to fileext argument in Rd part
+	* man/AnnoyIndex.Rd: Regenerated to update example
+
+2024-09-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Authors@R): Added
+
+2024-08-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version
+	* inst/include/RcppAnnoy.h: Idem
+
+	* R/annoy.R: Add alias for AnnoyDotProduct
+	* man/AnnoyIndex.Rd: Re-rendered
+
+	* README.md: Switch two more http:// URLs to https://
+
+2024-08-03  Benjamin James  <benjames@mit.edu>
+
+        * R/annoy.R: Add AnnoyDotProduct to namespace
+	* inst/tinytest/testDotProduct.R: Unit tests for 'AnnoyDotProduct'
+
+	* src/init.c: Added new dot product distance measure (via template)
+	* src/annoy.cpp: Added template and module for AnnoyDotProduct
+
+2024-05-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Use tinyverse.netlify.app for dependency badge
+
+2024-02-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v4,
+	add r-ci-setup actions
+
 2024-01-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.0.22
@@ -270,7 +372,7 @@
 	the hat to Mark van der Loo for his January 2019 blog post
 	* vignettes/rmd/UsingAnnoyInCpp.Rmd (vignette): Moved
 	* vignettes/rmd/rcppannoy.bib: Idem
-	
+
 	* DESCRIPTION (Suggests): Remove three packages needed for vignette
 	* .travis.yml (install): Idem
 

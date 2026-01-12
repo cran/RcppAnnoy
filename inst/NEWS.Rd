@@ -3,9 +3,24 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcppannoy/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcppannoy/issues/#1}{##1}}
 
+\section{Changes in version 0.0.23 (2026-01-12)}{
+  \itemize{
+    \item Add dot product distance metrics (Benjamin James in \ghpr{78})
+    \item Apply small polish to the documentation (Dirk closing \ghit{79})
+    \item A new \code{demo()} has been added (Samuel Granjeaud in \ghit{79})
+    \item Switch to Authors@R in DESCRIPTION 
+    \item Several updates to continuous integration and README.md
+    \item Small enhancements to package help files
+    \item Updates to vignettes and references
+    \item Vignette now uses \code{Rcpp::asis} builder (Dirk in \ghpr{80})
+    \item Switch one macro to a function to avoid a compiler nag (Amos Elberg
+    in \ghpr{81})
+  }
+}
+
 \section{Changes in version 0.0.22 (2024-01-23)}{
   \itemize{
-    \item Replace empty examples macros to satisfy CRAN request.
+    \item Replace empty examples macro to satisfy CRAN request.
   }
 }
 
@@ -13,14 +28,14 @@
   \itemize{
     \item The build setup switched from C++11 to C++17 which offers threading
     support (which remains off by default to ensure consistent results)
-    \item Upstream code was update to Annoy 1.17.3, the switch to an explicit
+    \item Upstream code was updated to Annoy 1.17.3, the switch to an explicit
     C++ namespace has been accomodated  (Dirk in \ghpr{75})
   }
 }
 
 \section{Changes in version 0.0.20 (2022-10-27)}{
   \itemize{
-    \item Minor tweaks appease \code{clang-15} and \code{Xcode 14}
+    \item Minor tweaks to appease \code{clang-15} and \code{Xcode 14}
   }
 }
 

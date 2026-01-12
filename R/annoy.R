@@ -1,10 +1,11 @@
 #' @name AnnoyIndex
 #'
 #' @aliases
-#' AnnoyEuclidean Rcpp_AnnoyEuclidean-class Rcpp_AnnoyEuclidean
-#' AnnoyAngular   Rcpp_AnnoyAngular-class   Rcpp_AnnoyAngular
-#' AnnoyManhattan Rcpp_AnnoyManhattan-class Rcpp_AnnoyManhattan
-#' AnnoyHamming   Rcpp_AnnoyHamming-class   Rcpp_AnnoyHamming
+#' AnnoyEuclidean  Rcpp_AnnoyEuclidean-class  Rcpp_AnnoyEuclidean
+#' AnnoyAngular    Rcpp_AnnoyAngular-class    Rcpp_AnnoyAngular
+#' AnnoyManhattan  Rcpp_AnnoyManhattan-class  Rcpp_AnnoyManhattan
+#' AnnoyHamming    Rcpp_AnnoyHamming-class    Rcpp_AnnoyHamming
+#' AnnoyDotProduct Rcpp_AnnoyDotProduct-class Rcpp_AnnoyDotProduct
 #'
 #' @title Approximate Nearest Neighbors with Annoy
 #'
@@ -167,16 +168,10 @@
 #' # Return results as list with an element for distance
 #' a$getNNsByVectorList(v, 5, -1, TRUE)
 #'
-#' # Retrieve 5 nearest neighbors to vector v
-#' # search_k = -1 will invoke default search_k value of n_trees * n
-#' # Return results as list with an element for distance
-#' a$getNNsByVectorList(v, 5, -1, TRUE)
-#'
-#'
 #' # SAVING/LOADING ANNOY INDEX ---------------------------------------------------
 #'
 #' # Create a tempfile, replace with a local file to keep
-#' treefile <- tempfile(pattern="annoy", fileext="tree")
+#' treefile <- tempfile(pattern="annoy", fileext=".tree")
 #'
 #' # Save annoy tree to disk
 #' a$save(treefile)
@@ -193,3 +188,4 @@ loadModule("AnnoyAngular", TRUE)
 loadModule("AnnoyEuclidean", TRUE)
 loadModule("AnnoyManhattan", TRUE)
 loadModule("AnnoyHamming", TRUE)
+loadModule("AnnoyDotProduct", TRUE)

@@ -2,10 +2,12 @@ Package: RcppAnnoy
 Type: Package
 Title: 'Rcpp' Bindings for 'Annoy', a Library for Approximate Nearest
         Neighbors
-Version: 0.0.22
-Date: 2024-01-23
-Author: Dirk Eddelbuettel
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Version: 0.0.23
+Date: 2026-01-12
+Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
+                    comment = c(ORCID = "0000-0001-6419-907X")),
+             person("Erik", "Bernhardsson", role = c("aut"),
+                    comment = "Principal author of Annoy"))
 Description: 'Annoy' is a small C++ library for Approximate Nearest Neighbors 
  written for efficient memory usage as well an ability to load from / save to
  disk. This package provides an R interface by relying on the 'Rcpp' package,
@@ -22,7 +24,13 @@ URL: https://github.com/eddelbuettel/rcppannoy,
         https://dirk.eddelbuettel.com/code/rcpp.annoy.html
 BugReports: https://github.com/eddelbuettel/rcppannoy/issues
 NeedsCompilation: yes
-RoxygenNote: 7.1.1
-Packaged: 2024-01-23 00:46:29 UTC; edd
+RoxygenNote: 7.3.2
+Encoding: UTF-8
+VignetteBuilder: Rcpp
+Packaged: 2026-01-12 12:24:51 UTC; edd
+Author: Dirk Eddelbuettel [aut, cre] (ORCID:
+    <https://orcid.org/0000-0001-6419-907X>),
+  Erik Bernhardsson [aut] (Principal author of Annoy)
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Repository: CRAN
-Date/Publication: 2024-01-23 14:33:04 UTC
+Date/Publication: 2026-01-12 13:10:02 UTC
